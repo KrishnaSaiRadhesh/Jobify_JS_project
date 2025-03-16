@@ -1,0 +1,271 @@
+When we click anything on the home it should tell please
+login
+
+after login i should adjust the functionality
+
+showing the jobs in the jobs seeker portal and adjust it 
+where it required and redirecting of job should be 
+adjusted.
+
+about and contact us sections are empty
+
+
+
+
+
+
+// jobseeker dashboard.html lo when the user has 
+it should show that the user as logged in symbol
+
+there are some changes in this jobseeker dashboard page
+
+I have to do modification of search bar
+
+
+
+
+
+// Database addons
+
+here for the landing page create a different Database
+
+and after that based on requirement you have to change 
+add more databases
+
+
+
+
+<!-- <section class="category">
+        <h1 class="heading">Job categories</h1>
+
+        <div class="box-container">
+             <a href="#" class="box">
+                <i class="fas fa-code"></i>
+                <div>
+                    <h3>development</h3>
+                    <span>2200 jobs</span>
+                </div>
+             </a>
+
+             <a href="#" class="box">
+                <i class="fas fa-code"></i>
+                <div>
+                    <h3>development</h3>
+                    <span>2200 jobs</span>
+                </div>
+             </a>
+
+             <a href="#" class="box">
+                <i class="fas fa-code"></i>
+                <div>
+                    <h3>development</h3>
+                    <span>2200 jobs</span>
+                </div>
+             </a>
+
+             <a href="#" class="box">
+                <i class="fas fa-code"></i>
+                <div>
+                    <h3>development</h3>
+                    <span>2200 jobs</span>
+                </div>
+             </a>
+
+            <a href="#" class="box">
+                <i class="fas fa-code"></i>
+                <div>
+                    <h3>development</h3>
+                    <span>2200 jobs</span>
+                </div>
+            </a>
+
+            <a href="#" class="box">
+                <i class="fas fa-code"></i>
+                <div>
+                    <h3>development</h3>
+                    <span>2200 jobs</span>
+                </div>
+            </a>
+
+            <a href="#" class="box">
+                <i class="fas fa-code"></i>
+                <div>
+                    <h3>development</h3>
+                    <span>2200 jobs</span>
+                </div>
+            </a>
+
+            <a href="#" class="box">
+                <i class="fas fa-code"></i>
+                <div>
+                    <h3>development</h3>
+                    <span>2200 jobs</span>
+                </div>
+            </a>
+
+        </div>
+    </section> -->
+
+
+
+    <!-- <div class="box">
+                    <div class="company">
+                        <img src="/carousel/accenture.png" alt="Infosys">
+                        <div>
+                            <h3>IT infosys co.</h3>
+                            <p>2 days ago</p>
+                        </div>
+                    </div>
+                <h3 class="job-title">senior web developer</h3>
+                <p class="location"><i class="fas fa-map-marker-alt"></i>
+                <span>mumbai, india</span></p>
+                <div class="tags">
+                    <p><i class="fas fa-indian-rupee-sign"></i><span>10k -25k</span></p>
+                    <p><i class="fas fa-briefcase"></i><span>full time</span></p>
+                    <p><i class="fas fa-clock"></i><span> day shift</span></p>
+                </div>
+                <div class="flex-btn">
+                    <a href="view_job.html" class="btn">view details</a>
+                    <button type="submit" class="far fa-heart" name="save"></button>
+                </div>
+
+            </div> -->
+
+
+            <!-- <div class="box">
+                <div class="company">
+                    <img src="carousel/amazon.png" alt="Infosys">
+                    <div>
+                        <h3>IT infosys co.</h3>
+                        <span>2 days ago</span>
+                    </div>
+                </div>
+                <h3 class="job-title">senior web developer</h3>
+                <p class="location"><i class="fas fa-map-marker-alt"></i>
+                <span>mumbai, india</span></p>
+                <div class="tags">
+                    <p><i class="fas fa-indian-rupee-sign"></i><span>10k -25k</span></p>
+                    <p><i class="fas fa-briefcase"></i><span>full time</span></p>
+                    <p><i class="fas fa-clock"></i><span> day shift</span></p>
+                </div>
+                <div class="flex-btn">
+                    <a href="view_job.html" class="btn">view details</a>
+                    <button type="submit" class="far fa-heart" name="save"></button>
+                </div>
+
+            </div>
+
+            <div class="box">
+                <div class="company">
+                    <img src="./carousel/cognizant.png" alt="Infosys">
+                    <div>
+                        <h3>IT infosys co.</h3>
+                        <span>2 days ago</span>
+                    </div>
+                </div>
+                <h3 class="job-title">senior web developer</h3>
+                <p class="location"><i class="fas fa-map-marker-alt"></i>
+                <span>mumbai, india</span></p>
+                <div class="tags">
+                    <p><i class="fas fa-indian-rupee-sign"></i><span>10k -25k</span></p>
+                    <p><i class="fas fa-briefcase"></i><span>full time</span></p>
+                    <p><i class="fas fa-clock"></i><span> day shift</span></p>
+                </div>
+                <div class="flex-btn">
+                    <a href="view_job.html" class="btn">view details</a>
+                    <button type="submit" class="far fa-heart" name="save"></button>
+                </div>
+
+            </div>
+
+            <div class="box">
+                <div class="company">
+                    <img src="/carousel/kpmg.png" alt="Infosys">
+                    <div>
+                        <h3>IT infosys co.</h3>
+                        <span>2 days ago</span>
+                    </div>
+                </div>
+                <h3 class="job-title">senior web developer</h3>
+                <p class="location"><i class="fas fa-map-marker-alt"></i>
+                <span>mumbai, india</span></p>
+                <div class="tags">
+                    <p><i class="fas fa-indian-rupee-sign"></i><span>10k -25k</span></p>
+                    <p><i class="fas fa-briefcase"></i><span>full time</span></p>
+                    <p><i class="fas fa-clock"></i><span> day shift</span></p>
+                </div>
+                <div class="flex-btn">
+                    <a href="view_job.html" class="btn">view details</a>
+                    <button type="submit" class="far fa-heart" name="save"></button>
+                </div>
+
+            </div>
+
+            <div class="box">
+                <div class="company">
+                    <img src="/carousel/netflix.png" alt="Infosys">
+                    <div>
+                        <h3>IT infosys co.</h3>
+                        <span>2 days ago</span>
+                    </div>
+                </div>
+                <h3 class="job-title">senior web developer</h3>
+                <p class="location"><i class="fas fa-map-marker-alt"></i>
+                <span>mumbai, india</span></p>
+                <div class="tags">
+                    <p><i class="fas fa-indian-rupee-sign"></i><span>10k -25k</span></p>
+                    <p><i class="fas fa-briefcase"></i><span>full time</span></p>
+                    <p><i class="fas fa-clock"></i><span> day shift</span></p>
+                </div>
+                <div class="flex-btn">
+                    <a href="view_job.html" class="btn">view details</a>
+                    <button type="submit" class="far fa-heart" name="save"></button>
+                </div>
+
+            </div>
+
+            <div class="box">
+                <div class="company">
+                    <img src="./carousel/tcs.png" alt="Infosys">
+                    <div>
+                        <h3>IT infosys co.</h3>
+                        <span>2 days ago</span>
+                    </div>
+                </div>
+                <h3 class="job-title">senior web developer</h3>
+                <p class="location"><i class="fas fa-map-marker-alt"></i>
+                <span>mumbai, india</span></p>
+                <div class="tags">
+                    <p><i class="fas fa-indian-rupee-sign"></i><span>10k -25k</span></p>
+                    <p><i class="fas fa-briefcase"></i><span>full time</span></p>
+                    <p><i class="fas fa-clock"></i><span> day shift</span></p>
+                </div>
+                <div class="flex-btn">
+                    <a href="view_job.html" class="btn">view details</a>
+                    <button type="submit" class="far fa-heart" name="save"></button>
+                </div>
+
+            </div>
+
+            <div class="box">
+                <div class="company">
+                    <img src="./carousel/synechron.png" alt="Infosys">
+                    <div>
+                        <h3>IT infosys co.</h3>
+                        <span>2 days ago</span>
+                    </div>
+                </div>
+                <h3 class="job-title">senior web developer</h3>
+                <p class="location"><i class="fas fa-map-marker-alt"></i>
+                <span>mumbai, india</span></p>
+                <div class="tags">
+                    <p><i class="fas fa-indian-rupee-sign"></i><span>10k -25k</span></p>
+                    <p><i class="fas fa-briefcase"></i><span>full time</span></p>
+                    <p><i class="fas fa-clock"></i><span> day shift</span></p>
+                </div>
+                <div class="flex-btn">
+                    <a href="view_job.html" class="btn">view details</a>
+                    <button type="submit" class="far fa-heart" name="save"></button>
+                </div>
+
+            </div> -->

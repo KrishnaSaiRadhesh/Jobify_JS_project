@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Company Carousel</title>
+     <style>
+        body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.carousel-container {
+    position: relative;
+    width: 80%;
+    max-width: 900px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+    width: 200px;
+    height: auto;
+    margin: 0 10px;
+    object-fit: contain;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
+
+button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+     </style>
+</head>
+<body>
+    <div class="carousel-container">
+        <button id="prevBtn">&#10094;</button>
+        <div class="carousel-wrapper">
+            <div class="carousel">
+                <img src="./accenture.png" alt="ICICI Bank">
+                <img src="./cognizant.png" alt="Cognizant">
+                <img src="./kpmg.png" alt="KPMG">
+                <img src="./netflix.png" alt="Netflix">
+                <img src="./amazon.png" alt="Synechron">
+                <!-- Duplicate images for infinite effect -->
+                <img src="./icici.png" alt="ICICI Bank">
+                <img src="./wipro.png" alt="Cognizant">
+                <img src="./tcs.png" alt="KPMG">
+                <img src="./netflix.png" alt="Netflix">
+                <img src="./synechron.png" alt="Synechron">
+            </div>
+        </div>
+        <button id="nextBtn">&#10095;</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

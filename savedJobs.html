@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saved Jobs</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .container {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+      }
+      .job-card {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      .job-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .company {
+        font-size: 20px;
+        color: gray;
+        margin-bottom: 10px;
+      }
+      .description {
+        margin-bottom: 20px;
+      }
+      .remove-btn {
+        background-color: red;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+      }
+      .no-jobs {
+        text-align: center;
+        font-size: 20px;
+        color: gray;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="header">
+      <section class="flex">
+        <div id="menu-btn" class="fas fa-bars-staggered"></div>
+
+        <a href="home.html" class="Logo"
+          ><i class="fas fa-briefcase"></i> Jobify</a
+        >
+
+        <nav class="navbar">
+          <a href="home.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="jobs.html">Jobs</a>
+          <a href="contact.html">Contact us</a>
+          <a href="saved_jobs.html">Saved Jobs</a> <!-- Link to Saved Jobs Page -->
+        </nav>
+
+        <div class="access">
+          <a href="Login.html" class="btn-1" style="margin-top: 0">Login</a>
+          <a href="Signup.html" class="btn-2" style="margin-top: 0">Register</a>
+        </div>
+      </section>
+    </header>
+
+    <!-- Body -->
+    <div class="container">
+      <h1>Saved Jobs</h1>
+      <div id="saved-jobs-list"></div>
+    </div>
+
+    <footer class="footer">
+      <section class="grid">
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="home.html"><i class="fas fa-angle-right"></i> home</a>
+          <a href="about.html"><i class="fas fa-angle-right"></i> about</a>
+          <a href="jobs.html"><i class="fas fa-angle-right"></i> Jobs</a>
+          <a href="contact.html"><i class="fas fa-angle-right"></i> contact</a>
+        </div>
+
+        <div class="box">
+          <h3>Extra links</h3>
+          <a href="home.html"><i class="fas fa-angle-right"></i> home</a>
+          <a href="about.html"><i class="fas fa-angle-right"></i> about</a>
+          <a href="jobs.html"><i class="fas fa-angle-right"></i> Jobs</a>
+          <a href="contact.html"><i class="fas fa-angle-right"></i> contact</a>
+        </div>
+
+        <div class="box">
+          <h3>follow us</h3>
+          <a href="#"><i class="fab fa-facebook-f"></i> facebook</a>
+          <a href="#"><i class="fab fa-twitter"></i> twitter</a>
+          <a href="#"><i class="fab fa-instagram"></i> instagram</a>
+          <a href="#"><i class="fab fa-linkedin"> </i> linkedin</a>
+          <a href="#"><i class="fab fa-youtube"></i> youtube</a>
+        </div>
+      </section>
+
+      <div class="credit">
+        &copy; copyright @2025 by <span>Jobify</span> | all rights reserverd!
+      </div>
+    </footer>
+
+    <script>
+      // Function to display saved jobs
+      function displaySavedJobs() {
+        const savedJobsList = document.getElementById("saved-jobs-list");
+
+        // Retrieve saved jobs from localStorage
+        const savedJobs = JSON.parse(localStorage.getItem("savedJobs")) || [];
+
+        if (savedJobs.length === 0) {
+          // Display a message if no jobs are saved
+          savedJobsList.innerHTML = `<p class="no-jobs">No jobs saved yet.</p>`;
+          return;
+        }
+
+        // Loop through saved jobs and create HTML for each job
+        savedJobsList.innerHTML = savedJobs
+          .map((job, index) => `
+            <div class="job-card">
+              <h2 class="job-title">${job.job_role}</h2>
+              <h3 class="company">${job.company}</h3>
+              <div class="description">
+                <p><strong>Job Summary:</strong> ${job.description["job-summary"]}</p>
+                <p><strong>Key Responsibilities:</strong> ${job.description["key-responsibilities"]}</p>
+                <p><strong>Required Skills:</strong> ${job.description["required_Skills_and_Qualifications"]}</p>
+                <p><strong>Preferred Qualifications:</strong> ${job.description["Preferred Qualifications"]}</p>
+              </div>
+              <button class="remove-btn" onclick="removeJob(${index})">Remove</button>
+            </div>
+          `)
+          .join("");
+      }
+
+      // Function to remove a job from the saved list
+      function removeJob(index) {
+        // Retrieve saved jobs from localStorage
+        let savedJobs = JSON.parse(localStorage.getItem("savedJobs")) || [];
+
+        // Remove the job at the specified index
+        savedJobs.splice(index, 1);
+
+        // Save the updated list back to localStorage
+        localStorage.setItem("savedJobs", JSON.stringify(savedJobs));
+
+        // Refresh the displayed list
+        displaySavedJobs();
+      }
+
+      // Display saved jobs when the page loads
+      document.addEventListener("DOMContentLoaded", displaySavedJobs);
+    </script>
+  </body>
+</html>

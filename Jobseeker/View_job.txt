@@ -1,0 +1,6 @@
+here the view job page i want to adjust the styling where the toast
+message getting hide by the header
+
+One more problem when the model is opened it is highlighting the
+header also i have to resolve that problem as soon as possible...
+

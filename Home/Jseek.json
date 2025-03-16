@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "id": "7697",
+      "name": "Krishna",
+      "email": "Krish@gmail.com",
+      "pass": "Krish@123",
+      "usertype": "jobseeker"
+    },
+    {
+      "id": "3e87",
+      "name": "Maruthi",
+      "email": "Maruthi@gmail.com",
+      "pass": "Maruthi@123",
+      "usertype": "employer"
+    }
+  ]
+}
