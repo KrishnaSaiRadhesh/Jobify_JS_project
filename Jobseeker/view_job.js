@@ -161,7 +161,6 @@ async function loadUserProfile(){
 
     if(user){
       document.getElementById("user-name").innerText = user.name
-      document.getElementById("profile-email").innerText = user.email
     }
 }
 

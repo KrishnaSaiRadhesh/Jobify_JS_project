@@ -122,7 +122,7 @@ window.onload = function () {
 };
 
 function viewJobDetails(jobId) {
-  window.location.href = `testing_view_job.html?id=${jobId}&email=${user}`;
+  window.location.href = `testing_view_job.html?id=${jobId}`;
 }
 
 

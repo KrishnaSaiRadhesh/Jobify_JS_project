@@ -4,11 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Saved Jobs</title>
+    <link rel="stylesheet" href="../homeStyling.css">
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        padding: 20px;
-      }
       .container {
         max-width: 800px;
         margin: auto;
@@ -48,6 +45,63 @@
         font-size: 20px;
         color: gray;
       }
+
+      .profile-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .profile-icon {
+        color: black;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        padding-left: 5%;
+    }
+
+    .profile-menu {
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background: white;
+        border: 1px solid #ccc;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        padding: 10px;
+        display: none;
+        width: 150px;
+        text-align: center;
+    }
+
+    .profile-menu button {
+        width: 100%;
+        padding: 5px;
+        border: none;
+        background: #ff3b3b;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .profile-menu button:hover {
+        background: #d32f2f;
+    }
+
+
+    .profile img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .profile span {
+        font-size: 16px;
+        font-weight: bold;
+    }
     </style>
   </head>
 
@@ -65,13 +119,22 @@
           <a href="about.html">About</a>
           <a href="jobs.html">Jobs</a>
           <a href="contact.html">Contact us</a>
-          <a href="saved_jobs.html">Saved Jobs</a> <!-- Link to Saved Jobs Page -->
         </nav>
 
-        <div class="access">
-          <a href="Login.html" class="btn-1" style="margin-top: 0">Login</a>
-          <a href="Signup.html" class="btn-2" style="margin-top: 0">Register</a>
-        </div>
+        <div class="profile">
+
+          <div class="profile-icon" onclick="toggleProfileMenu()">
+              <img id="user-avatar" src="img_avatar.png" alt="User Avatar">
+              <span id="user-name">Guest</span>
+          </div>
+       
+
+          <div id="profile-menu" class="profile-menu">
+              <p id="profile-email">user@example.com</p>
+              <button onclick="logoutUser()">Sign Out</button>
+          </div>
+      </div>
+
       </section>
     </header>
 
@@ -135,10 +198,10 @@
               <h2 class="job-title">${job.job_role}</h2>
               <h3 class="company">${job.company}</h3>
               <div class="description">
-                <p><strong>Job Summary:</strong> ${job.description["job-summary"]}</p>
-                <p><strong>Key Responsibilities:</strong> ${job.description["key-responsibilities"]}</p>
+                <p><strong>Job Summary:</strong> ${job.description["job_summary"]}</p>
+                <p><strong>Key Responsibilities:</strong> ${job.description["key_responsibilities"]}</p>
                 <p><strong>Required Skills:</strong> ${job.description["required_Skills_and_Qualifications"]}</p>
-                <p><strong>Preferred Qualifications:</strong> ${job.description["Preferred Qualifications"]}</p>
+                <p><strong>Preferred Qualifications:</strong> ${job.description["Preferred_Qualifications"]}</p>
               </div>
               <button class="remove-btn" onclick="removeJob(${index})">Remove</button>
             </div>
