@@ -226,6 +226,143 @@
 
       // Display saved jobs when the page loads
       document.addEventListener("DOMContentLoaded", displaySavedJobs);
+
+
+
+  //     async function fetchSavedJobs() {
+  //   try {
+  //     const response = await fetch('https://rift-spiky-curler.glitch.me/Saved_data'); // Replace with your API endpoint
+  //     if (!response.ok) {
+  //       throw new Error('Failed to fetch saved jobs');
+  //     }
+  //     const data = await response.json();
+  //     return data;
+  //   } catch (error) {
+  //     console.error('Error fetching saved jobs:', error);
+  //     return [];
+  //   }
+  // }
+
+  // // Function to display saved jobs
+  // async function displaySavedJobs() {
+  //   const savedJobsList = document.getElementById("saved-jobs-list");
+
+  //   // Fetch saved jobs from JSON or API
+  //   const savedJobs = await fetchSavedJobs();
+
+  //   if (savedJobs.length === 0) {
+  //     // Display a message if no jobs are saved
+  //     savedJobsList.innerHTML = `<p class="no-jobs">No jobs saved yet.</p>`;
+  //     return;
+  //   }
+
+  //   // Loop through saved jobs and create HTML for each job
+  //   savedJobsList.innerHTML = savedJobs
+  //     .map((job, index) => `
+  //       <div class="job-card">
+  //         <h2 class="job-title">${job.job_role}</h2>
+  //         <h3 class="company">${job.company}</h3>
+  //         <div class="description">
+  //           <p><strong>Job Summary:</strong> ${job.description["job_summary"]}</p>
+  //           <p><strong>Key Responsibilities:</strong> ${job.description["key_responsibilities"]}</p>
+  //           <p><strong>Required Skills:</strong> ${job.description["required_Skills_and_Qualifications"]}</p>
+  //           <p><strong>Preferred Qualifications:</strong> ${job.description["Preferred_Qualifications"]}</p>
+  //         </div>
+  //         <button class="remove-btn" onclick="removeJob(${index})">Remove</button>
+  //       </div>
+  //     `)
+  //     .join("");
+  // }
+
+  // // Function to remove a job from the saved list
+  // async function removeJob(index) {
+  //   // Fetch saved jobs from JSON or API
+  //   let savedJobs = await fetchSavedJobs();
+
+  //   // Remove the job at the specified index
+  //   savedJobs.splice(index, 1);
+
+  //   // Save the updated list back to the JSON file or API
+  //   await saveJobsToServer(savedJobs);
+
+  //   // Refresh the displayed list
+  //   displaySavedJobs();
+  // }
+
+
+  // Function to fetch saved jobs from the backend
+// async function fetchSavedJobs(userId) {
+//   try {
+//     const response = await fetch(`https://rift-spiky-curler.glitch.me/Saved_data?userId=${userId}`);
+//     if (!response.ok) {
+//       throw new Error("Failed to fetch saved jobs");
+//     }
+//     const data = await response.json();
+//     return data;
+//   } catch (error) {
+//     console.error("Error fetching saved jobs:", error);
+//     return [];
+//   }
+// }
+
+// // Function to display saved jobs
+// async function displaySavedJobs() {
+//   const savedJobsList = document.getElementById("saved-jobs-list");
+
+//   // Get the current user ID (you can get this from the user's session or query parameter)
+//   const userId = getQueryParam("userId"); // Replace with your logic to get the user ID
+
+//   if (!userId) {
+//     savedJobsList.innerHTML = `<p class="no-jobs">User not logged in.</p>`;
+//     return;
+//   }
+
+//   // Fetch saved jobs from the backend
+//   const savedJobs = await fetchSavedJobs(userId);
+
+//   if (savedJobs.length === 0) {
+//     savedJobsList.innerHTML = `<p class="no-jobs">No jobs saved yet.</p>`;
+//     return;
+//   }
+
+//   // Loop through saved jobs and create HTML for each job
+//   savedJobsList.innerHTML = savedJobs
+//     .map((job, index) => `
+//       <div class="job-card">
+//         <h2 class="job-title">${job.job_role}</h2>
+//         <h3 class="company">${job.company}</h3>
+//         <div class="description">
+//           <p><strong>Job Summary:</strong> ${job.description["job_summary"]}</p>
+//           <p><strong>Key Responsibilities:</strong> ${job.description["key_responsibilities"]}</p>
+//           <p><strong>Required Skills:</strong> ${job.description["required_Skills_and_Qualifications"]}</p>
+//           <p><strong>Preferred Qualifications:</strong> ${job.description["Preferred_Qualifications"]}</p>
+//         </div>
+//         <button class="remove-btn" onclick="removeJob('${job.id}', '${userId}')">Remove</button>
+//       </div>
+//     `)
+//     .join("");
+// }
+
+
+// async function removeJob(jobId, userId) {
+//   try {
+//     const response = await fetch(`https://your-backend-api.com/api/remove-job/${jobId}?userId=${userId}`, {
+//       method: "DELETE",
+//     });
+
+//     if (!response.ok) {
+//       throw new Error("Failed to remove job");
+//     }
+
+//     // Refresh the saved jobs list
+//     displaySavedJobs();
+//   } catch (error) {
+//     console.error("Error removing job:", error);
+//     alert("Failed to remove job.");
+//   }
+// }
+
+// document.addEventListener("DOMContentLoaded", displaySavedJobs);
     </script>
   </body>
 </html>

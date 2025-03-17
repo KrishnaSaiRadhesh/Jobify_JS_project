@@ -126,3 +126,11 @@ function viewJobDetails(jobId) {
 }
 
 
+
+document.addEventListener("submit", (e)=> {
+  e.preventDefault();
+
+  let job_title = document.getElementById("Jt").value;
+  let job_location = document.getElementById("Jl").value
+})
+

@@ -96,6 +96,11 @@ button:hover {
   transition: 0.3s ease-in-out;
 }
 
+.job-card img{
+  width: 200px;
+  height: 100px;
+}
+
 .job-card:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

@@ -40,7 +40,9 @@ function getQueryParam(param) {
       ).innerHTML = `<h2>${error.message}</h2>`;
     }
   }
-8
+
+
+
   // Save Job Functionality
   function saveJob() {
     if (!window.currentJob) {
@@ -65,6 +67,47 @@ function getQueryParam(param) {
 
     alert("Job saved successfully!");
   }
+
+
+
+//   // Function to save a job to the backend
+// async function saveJob() {
+//   if (!window.currentJob) {
+//     alert("No job data to save!");
+//     return;
+//   }
+
+//   // Get the current user ID (you can get this from the user's session or query parameter)
+//   const userId = getQueryParam("userId"); // Replace with your logic to get the user ID
+
+//   if (!userId) {
+//     alert("User not logged in.");
+//     return;
+//   }
+
+//   // Save the job to the backend
+//   try {
+//     const response = await fetch("https://rift-spiky-curler.glitch.me/Saved_data", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify({
+//         userId,
+//         job: window.currentJob,
+//       }),
+//     });
+
+//     if (!response.ok) {
+//       throw new Error("Failed to save job");
+//     }
+
+//     alert("Job saved successfully!");
+//   } catch (error) {
+//     console.error("Error saving job:", error);
+//     alert("Failed to save job.");
+//   }
+// }
 
   // Apply Job Functionality
   function applyJob() {

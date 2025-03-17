@@ -248,7 +248,7 @@ section{
     color: var(--red);
 }
 
-.job-filter form .flex .box .input{
+.job-filter form .flex .box #Jt,#Jl{
     width: 100%;
     border-radius: .5rem;
     padding: 1.4rem;
@@ -258,6 +258,21 @@ section{
     font-size: 1.8rem;
 }
 
+.job-filter form .flex button{
+    border-radius: 10%;
+    padding: .5rem;
+    color: var(--white);
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    /* margin: 1.5rem 0; */
+    background-color: var(--main-color);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.job-filter form .flex button:hover{
+    background-color: #007bff;
+}
 
 .job-filter form .dropdown-container{
     margin-top: 1rem;
