@@ -127,10 +127,45 @@ function viewJobDetails(jobId) {
 
 
 
-document.addEventListener("submit", (e)=> {
-  e.preventDefault();
+// document.addEventListener("submit", (e)=> {
+//   e.preventDefault();
 
-  let job_title = document.getElementById("Jt").value;
-  let job_location = document.getElementById("Jl").value
-})
+//   let jobCards = document.querySelectorAll(".company");
+//   let job_title = document.getElementById("Jt");
+//   let job_location = document.getElementById("Jl");
+
+//   function filterJobs(){
+//     const title = job_title.value.toLowerCase();
+//     const location = job_location.value.toLowerCase();
+
+//     jobCards.forEach(card =>{
+//       const Title = card.querySelector("Jt").textContent.toLowerCase();
+//       const Jobloc = card.querySelector("Jl").textContent.toLowerCase();
+
+//       
+// if (jobTitle.includes(titleFilter) && jobLocation.includes(locationFilter)) {
+//   card.style.display = "block"; // Show matching jobs
+// } else {
+//   card.style.display = "none"; // Hide non-matching jobs
+// }
+// titleInput.addEventListener("input", filterJobs);
+// locationInput.addEventListener("input", filterJobs);
+//     })
+//   }
+
+// })
+
+
+
+async function fetchFilteredJobs(){
+  const title = document.getElementById("Jt").ariaValueMax;
+  const location = document.getElementById("Jl").ariaValueMax;
+
+  const response = await fetch(`https://shimmer-olive-gibbon.glitch.me/Jobs_data?job_role=${title}&location=${location}`);
+  const jobs = await response.json();
+
+  displayJobs(jobs)
+}
+
+
 
