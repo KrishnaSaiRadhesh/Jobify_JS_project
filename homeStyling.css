@@ -64,7 +64,7 @@ section{
     max-width: 1200px;
 }
 
-.access{
+.auth-buttons{
     display: flex;
     gap: 20px;
 }
@@ -300,7 +300,7 @@ section{
     text-align: center;
 }
 
-.carousel-container {
+ .carousel-container {
     position: relative;
     width: 80%;
     max-width: 900px;
@@ -335,7 +335,6 @@ section{
     top: 50%;
     transform: translateY(-50%);
     opacity: 0.5;
-    /* background: rgba(0, 0, 0, 0.1); */
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -350,8 +349,8 @@ section{
 
 #nextBtn {
     right: 10px;
-}
-
+} 
+ 
 .flex-btn{
     display: flex;
     align-items: center;
@@ -657,3 +656,61 @@ section{
     margin-bottom: 10px;
 }
 
+
+
+.profile-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile-icon {
+    color: black;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding-left: 5%;
+}
+
+.profile-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+    width: 150px;
+    text-align: center;
+}
+
+.profile-menu button {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    background: #ff3b3b;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.profile-menu button:hover {
+    background: #d32f2f;
+}
+
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.profile span {
+    font-size: 16px;
+    font-weight: bold;
+}

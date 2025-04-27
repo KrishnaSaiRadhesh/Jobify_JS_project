@@ -24,23 +24,22 @@
           <a href="contact.html">Contact us</a>
         </nav>
 
-        <div class="access">
-          <!-- <a href="Login.html" class="btn-1" style="margin-top: 0">Login</a>
-          <a href="Signup.html" class="btn-2" style="margin-top: 0">Register</a> -->
-        </div>
 
 
-        <div class="profile">
-
-          <div class="profile-icon" onclick="toggleProfileMenu()">
-              <img id="user-avatar" src="img_avatar.png" alt="User Avatar">
-              <span id="user-name"></span>
+        <div class="auth-section">
+          <div id="auth-buttons" class="auth-buttons">
+              <a href="../Home/login.html" class="btn-1">Login</a>
+              <a href="../Home/signup.html" class="btn-2">Register</a>
           </div>
-       
-
-          <div id="profile-menu" class="profile-menu">
-              <p id="profile-email">user@example.com</p>
-              <button onclick="logoutUser()">Sign Out</button>
+          <div id="profile-section" class="profile" style="display: none;">
+              <div class="profile-icon" onclick="toggleProfileMenu()">
+                  <img id="user-avatar" src="img_avatar.png" alt="User Avatar">
+                  <span id="user-name">Guest</span>
+              </div>
+              <div id="profile-menu" class="profile-menu">
+                  <p><strong>Email:</strong> <span id="profile-email">user@example.com</span></p>
+                  <button onclick="logoutUser()">Sign Out</button>
+              </div>
           </div>
       </div>
       
@@ -123,5 +122,6 @@
    
 
     <script src="view_job.js"></script>
+    <script src="../Home/common.js"></script>
   </body>
 </html

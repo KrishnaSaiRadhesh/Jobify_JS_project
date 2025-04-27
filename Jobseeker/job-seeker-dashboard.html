@@ -5,20 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jobseeker portal</title>
     <link rel="stylesheet" href="JsStyle.css">
-
-
 </head>
 <body>
     <div id="loader">
         <div class="loader"></div>
-      </div>
+    </div>
     
     <header class="header">
-
         <section class="flex">
-
             <div id="menu-btn" class="fas fa-bars-staggered"></div>
-
             <a href="home.html" class="Logo"><i class="fas fa-briefcase"></i>Jobify</a>
 
             <nav class="navbar">
@@ -29,92 +24,83 @@
                 <a href="../Jobseeker/savedJobs.html">Saved Jobs</a> 
             </nav>
 
-        
-            <div class="profile">
-
-                <div class="profile-icon" onclick="toggleProfileMenu()">
-                    <img id="user-avatar" src="img_avatar.png" alt="User Avatar">
-                    <span id="user-name">Guest</span>
+                <div class="auth-section">
+                    <div id="auth-buttons" class="auth-buttons">
+                        <a href="../Home/login.html" class="btn-1">Login</a>
+                        <a href="../Home/signup.html" class="btn-2">Register</a>
+                    </div>
+                    <div id="profile-section" class="profile" style="display: none;">
+                        <div class="profile-icon" onclick="toggleProfileMenu()">
+                            <img id="user-avatar" src="img_avatar.png" alt="User Avatar">
+                            <span id="user-name">Guest</span>
+                        </div>
+                        <div id="profile-menu" class="profile-menu">
+                            <p><strong>Email:</strong> <span id="profile-email">user@example.com</span></p>
+                            <button onclick="logoutUser()">Sign Out</button>
+                        </div>
+                    </div>
                 </div>
-             
-
-                <div id="profile-menu" class="profile-menu">
-                    <p id="profile-email">user@example.com</p>
-                    <button onclick="logoutUser()">Sign Out</button>
-                </div>
-            </div>
-
 
         </section>
     </header>
 
     <section class="job-filter">
         <h1 class="heading">Search job here</h1>
-
-        <form action="" method="post">
+        <form action="" method="post" id="searchForm">
             <div class="flex">
                 <div class="box">
                     <p>job title <span>*</span></p>
                     <input type="text" name="title" placeholder="keyword, category or company" required maxlength="50" id="Jt">
                 </div>
-
                 <div class="box">
                     <p>job location</p>
                     <input type="text" name="location" placeholder="city, state or country" required maxlength="50" id="Jl">
                 </div>
-
-                <button type="submit" onclick="fetchFilteredJobs()">Search</button>
+                <button type="submit" id="searchBtn">Search</button>
             </div>
-
-        </form> 
-
+        </form>
     </section>
 
+    <div id="jobResults"></div>
+    <div class="body-container" id="body"></div>
 
-  <div class="body-container" id="body"> </div>
-
-  <section id="my-applications">
-    <h2>My Applications</h2>
-    <div id="application-list">
-    </div>
-  </section>
+    <section id="my-applications">
+        <h2>My Applications</h2>
+        <div id="application-list"></div>
+    </section>
 
     <footer class="footer">
         <section class="grid">
-
             <div class="box">
                 <h3>quick links</h3>
-                <a href="home.html"><i class="fas fa-angle-right"></i> home</a>
-                <a href="about.html"><i class="fas fa-angle-right"></i> about</a>
-                <a href="jobs.html"><i class="fas fa-angle-right"></i> Jobs</a>
-                <a href="contact.html"><i class="fas fa-angle-right"></i> contact</a>
+                <a href="../index.html"><i class="fas fa-angle-right"></i> home</a>
+                <a href="../about.html"><i class="fas fa-angle-right"></i> about</a>
+                <a href="../jobs.html"><i class="fas fa-angle-right"></i> Jobs</a>
+                <a href="../contact.html"><i class="fas fa-angle-right"></i> contact</a>
             </div>
-
             <div class="box">
                 <h3>Extra links</h3>
-                <a href="home.html"><i class="fas fa-angle-right"></i> home</a>
-                <a href="about.html"><i class="fas fa-angle-right"></i> about</a>
-                <a href="jobs.html"><i class="fas fa-angle-right"></i> Jobs</a>
-                <a href="contact.html"><i class="fas fa-angle-right"></i> contact</a>
+                <a href="../index.html"><i class="fas fa-angle-right"></i> home</a>
+                <a href="../Home/login.html"><i class="fas fa-angle-right"></i> login</a>
+                <a href="../Home/signup.html"><i class="fas fa-angle-right"></i> Register</a>
+                <a href="../contact.html"><i class="fas fa-angle-right"></i> contact</a>
             </div>
-
             <div class="box">
                 <h3>follow us</h3>
-                <a href="#"><i class="fab fa-facebook-f"></i> facebook</a>
-                <a href="#"><i class="fab fa-twitter"></i> twitter</a>
-                <a href="#"><i class="fab fa-instagram"></i> instagram</a>
-                <a href="#"><i class="fab fa-linkedin"> </i> linkedin</a>
-                <a href="#"><i class="fab fa-youtube"></i> youtube</a>
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i> facebook</a>
+                <a href="https://x.com/"><i class="fab fa-twitter"></i> twitter</a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i> instagram</a>
+                <a href="https://in.linkedin.com/"><i class="fab fa-linkedin"> </i> linkedin</a>
+                <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i> youtube</a>
             </div>
         </section>
-
-        <div class="credit">&copy; copyright @2025 by <span>Jobify</span>| all rights reserverd!</div>
-
+        <div class="credit">© copyright @2025 by <span>Jobify</span>| all rights reserved!</div>
     </footer>
 
-    <script src="job_seeker.js"></script>
+    <!-- Toast container -->
+    <div id="toast" class="toast"></div>
 
-
+    <script src="JS.js"></script>
+    <script src="../Home/common.js"></script>
 </body>
 </html>
-

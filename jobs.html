@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jobs</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="homeStyling.css">
 </head>
 <body>
     
@@ -17,15 +17,27 @@
             <a href="home.html" class="Logo"><i class="fas fa-briefcase"></i>Jobify</a>
 
             <nav class="navbar">
-                <a href="home.html">Home</a>
+                <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="jobs.html">Jobs</a>
                 <a href="contact.html">Contact us</a>
             </nav>
 
-            <div class="access">
-                <a href="Login.html" class="btn-1" style="margin-top: 0;">Login</a>
-                <a href="Signup.html" class="btn-2" style="margin-top: 0;">Register</a>
+            <div class="auth-section">
+                <div id="auth-buttons" class="auth-buttons">
+                    <a href="../Home/login.html" class="btn-1">Login</a>
+                    <a href="../Home/signup.html" class="btn-2">Register</a>
+                </div>
+                <div id="profile-section" class="profile" style="display: none;">
+                    <div class="profile-icon" onclick="toggleProfileMenu()">
+                        <img id="user-avatar" src="./Jobseeker/img_avatar.png" alt="User Avatar">
+                        <span id="user-name">Guest</span>
+                    </div>
+                    <div id="profile-menu" class="profile-menu">
+                        <p><strong>Email:</strong> <span id="profile-email">user@example.com</span></p>
+                        <button onclick="logoutUser()">Sign Out</button>
+                    </div>
+                </div>
             </div>
         </section>
     </header>
@@ -44,69 +56,9 @@
                     <p>job location</p>
                     <input type="text" name="location" placeholder="city, state or country" required maxlength="50" class="input">
                 </div>
-            </div>
 
-            <div class="dropdown-container">
-
-                <div class="dropdown">
-                    <input type="text" readonly placeholder="date posted" name="date" maxlength="20" class="output">
-                    <div class="lists">
-                        <p class="items">today</p>
-                        <p class="items">3 days ago</p>
-                        <p class="items">5 days ago</p>
-                        <p class="items">7 days ago</p>
-                        <p class="items">15 days ago</p>
-                        <p class="items">30 days ago</p>
-                    </div>
-                </div>
-
-                <div class="dropdown">
-                    <input type="text" readonly placeholder="salary" name="date" maxlength="20" class="output">
-                    <div class="lists">
-                        <p class="items">10k - 20k</p>
-                        <p class="items">20k - 30k</p>
-                        <p class="items">30k - 40k</p>
-                        <p class="items">40k - 50k</p>
-                        <p class="items">50k - 60k</p>
-                        <p class="items">1lakh</p>
-                    </div>
-                </div>
-
-
-                <div class="dropdown">
-                    <input type="text" readonly placeholder="job type" name="date" maxlength="20" class="output">
-                    <div class="lists">
-                        <p class="items">full-time</p>
-                        <p class="items">part-time</p>
-                        <p class="items">internship</p>
-                        <p class="items">contract</p>
-                        <p class="items">temporary</p>
-                        <p class="items">fresher</p>
-                    </div>
-                </div>
-
-
-                <div class="dropdown">
-                    <input type="text" readonly placeholder="education" name="date" maxlength="20" class="output">
-                    <div class="lists">
-                        <p class="items">10th pass</p>
-                        <p class="items">12th pass</p>
-                        <p class="items">bachlelor's degree</p>
-                        <p class="items">master's degree</p>
-                        <p class="items">diploma</p>
-                    </div>
-                </div>
-
-
-                <div class="dropdown">
-                    <input type="text" readonly placeholder="work shifts" name="date" maxlength="20" class="output">
-                    <div class="lists">
-                        <p class="items">day shift</p>
-                        <p class="items">night shift</p>
-                        <p class="items">remote</p>
-                        <p class="items">flexible shift</p>
-                    </div>
-                </div>
+                
+                <button type="submit" onclick="fetchFilteredJobs()">Search</button>
             </div>
 
         </form>
@@ -116,173 +68,7 @@
 
         <h1 class="heading">All jobs</h1>
 
-        <div class="box-container">
-            <div class="box">
-                <div class="company">
-                    <img src="/carousel/accenture.png" alt="Infosys">
-                    <div>
-                        <h3>IT infosys co.</h3>
-                        <p>2 days ago</p>
-                    </div>
-                </div>
-                <h3 class="job-title">senior web developer</h3>
-                <p class="location"><i class="fas fa-map-marker-alt"></i>
-                <span>mumbai, india</span></p>
-                <div class="tags">
-                    <p><i class="fas fa-indian-rupee-sign"></i><span>10k -25k</span></p>
-                    <p><i class="fas fa-briefcase"></i><span>full time</span></p>
-                    <p><i class="fas fa-clock"></i><span> day shift</span></p>
-                </div>
-                <div class="flex-btn">
-                    <a href="view_job.html" class="btn">view details</a>
-                    <button type="submit" class="far fa-heart" name="save"></button>
-                </div>
-
-            </div>
-
-
-            <div class="box">
-                <div class="company">
-                    <img src="carousel/amazon.png" alt="Infosys">
-                    <div>
-                        <h3>IT infosys co.</h3>
-                        <span>2 days ago</span>
-                    </div>
-                </div>
-                <h3 class="job-title">senior web developer</h3>
-                <p class="location"><i class="fas fa-map-marker-alt"></i>
-                <span>mumbai, india</span></p>
-                <div class="tags">
-                    <p><i class="fas fa-indian-rupee-sign"></i><span>10k -25k</span></p>
-                    <p><i class="fas fa-briefcase"></i><span>full time</span></p>
-                    <p><i class="fas fa-clock"></i><span> day shift</span></p>
-                </div>
-                <div class="flex-btn">
-                    <a href="view_job.html" class="btn">view details</a>
-                    <button type="submit" class="far fa-heart" name="save"></button>
-                </div>
-
-            </div>
-
-            <div class="box">
-                <div class="company">
-                    <img src="./carousel/cognizant.png" alt="Infosys">
-                    <div>
-                        <h3>IT infosys co.</h3>
-                        <span>2 days ago</span>
-                    </div>
-                </div>
-                <h3 class="job-title">senior web developer</h3>
-                <p class="location"><i class="fas fa-map-marker-alt"></i>
-                <span>mumbai, india</span></p>
-                <div class="tags">
-                    <p><i class="fas fa-indian-rupee-sign"></i><span>10k -25k</span></p>
-                    <p><i class="fas fa-briefcase"></i><span>full time</span></p>
-                    <p><i class="fas fa-clock"></i><span> day shift</span></p>
-                </div>
-                <div class="flex-btn">
-                    <a href="view_job.html" class="btn">view details</a>
-                    <button type="submit" class="far fa-heart" name="save"></button>
-                </div>
-
-            </div>
-
-            <div class="box">
-                <div class="company">
-                    <img src="/carousel/kpmg.png" alt="Infosys">
-                    <div>
-                        <h3>IT infosys co.</h3>
-                        <span>2 days ago</span>
-                    </div>
-                </div>
-                <h3 class="job-title">senior web developer</h3>
-                <p class="location"><i class="fas fa-map-marker-alt"></i>
-                <span>mumbai, india</span></p>
-                <div class="tags">
-                    <p><i class="fas fa-indian-rupee-sign"></i><span>10k -25k</span></p>
-                    <p><i class="fas fa-briefcase"></i><span>full time</span></p>
-                    <p><i class="fas fa-clock"></i><span> day shift</span></p>
-                </div>
-                <div class="flex-btn">
-                    <a href="view_job.html" class="btn">view details</a>
-                    <button type="submit" class="far fa-heart" name="save"></button>
-                </div>
-
-            </div>
-
-            <div class="box">
-                <div class="company">
-                    <img src="/carousel/netflix.png" alt="Infosys">
-                    <div>
-                        <h3>IT infosys co.</h3>
-                        <span>2 days ago</span>
-                    </div>
-                </div>
-                <h3 class="job-title">senior web developer</h3>
-                <p class="location"><i class="fas fa-map-marker-alt"></i>
-                <span>mumbai, india</span></p>
-                <div class="tags">
-                    <p><i class="fas fa-indian-rupee-sign"></i><span>10k -25k</span></p>
-                    <p><i class="fas fa-briefcase"></i><span>full time</span></p>
-                    <p><i class="fas fa-clock"></i><span> day shift</span></p>
-                </div>
-                <div class="flex-btn">
-                    <a href="view_job.html" class="btn">view details</a>
-                    <button type="submit" class="far fa-heart" name="save"></button>
-                </div>
-
-            </div>
-
-            <div class="box">
-                <div class="company">
-                    <img src="./carousel/tcs.png" alt="Infosys">
-                    <div>
-                        <h3>IT infosys co.</h3>
-                        <span>2 days ago</span>
-                    </div>
-                </div>
-                <h3 class="job-title">senior web developer</h3>
-                <p class="location"><i class="fas fa-map-marker-alt"></i>
-                <span>mumbai, india</span></p>
-                <div class="tags">
-                    <p><i class="fas fa-indian-rupee-sign"></i><span>10k -25k</span></p>
-                    <p><i class="fas fa-briefcase"></i><span>full time</span></p>
-                    <p><i class="fas fa-clock"></i><span> day shift</span></p>
-                </div>
-                <div class="flex-btn">
-                    <a href="view_job.html" class="btn">view details</a>
-                    <button type="submit" class="far fa-heart" name="save"></button>
-                </div>
-
-            </div>
-
-            <div class="box">
-                <div class="company">
-                    <img src="./carousel/synechron.png" alt="Infosys">
-                    <div>
-                        <h3>IT infosys co.</h3>
-                        <span>2 days ago</span>
-                    </div>
-                </div>
-                <h3 class="job-title">senior web developer</h3>
-                <p class="location"><i class="fas fa-map-marker-alt"></i>
-                <span>mumbai, india</span></p>
-                <div class="tags">
-                    <p><i class="fas fa-indian-rupee-sign"></i><span>10k -25k</span></p>
-                    <p><i class="fas fa-briefcase"></i><span>full time</span></p>
-                    <p><i class="fas fa-clock"></i><span> day shift</span></p>
-                </div>
-                <div class="flex-btn">
-                    <a href="view_job.html" class="btn">view details</a>
-                    <button type="submit" class="far fa-heart" name="save"></button>
-                </div>
-
-            </div>
-        </div>
-
-        <div style="text-align: center; margin-top: 2rem;">
-            <a href="jobs.html" class="btn">View all</a>
-        </div>
+        <div class="box-container"></div>
 
     </section>
 
@@ -293,7 +79,7 @@
 
             <div class="box">
                 <h3>quick links</h3>
-                <a href="home.html"><i class="fas fa-angle-right"></i> home</a>
+                <a href="index.html"><i class="fas fa-angle-right"></i> home</a>
                 <a href="about.html"><i class="fas fa-angle-right"></i> about</a>
                 <a href="jobs.html"><i class="fas fa-angle-right"></i> Jobs</a>
                 <a href="contact.html"><i class="fas fa-angle-right"></i> contact</a>
@@ -301,7 +87,7 @@
 
             <div class="box">
                 <h3>Extra links</h3>
-                <a href="home.html"><i class="fas fa-angle-right"></i> home</a>
+                <a href="index.html"><i class="fas fa-angle-right"></i> home</a>
                 <a href="about.html"><i class="fas fa-angle-right"></i> about</a>
                 <a href="jobs.html"><i class="fas fa-angle-right"></i> Jobs</a>
                 <a href="contact.html"><i class="fas fa-angle-right"></i> contact</a>
@@ -309,11 +95,11 @@
 
             <div class="box">
                 <h3>follow us</h3>
-                <a href="#"><i class="fab fa-facebook-f"></i> facebook</a>
-                <a href="#"><i class="fab fa-twitter"></i> twitter</a>
-                <a href="#"><i class="fab fa-instagram"></i> instagram</a>
-                <a href="#"><i class="fab fa-linkedin"> </i> linkedin</a>
-                <a href="#"><i class="fab fa-youtube"></i> youtube</a>
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i> facebook</a>
+                <a href="https://x.com/"><i class="fab fa-twitter"></i> twitter</a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i> instagram</a>
+                <a href="https://in.linkedin.com/"><i class="fab fa-linkedin"> </i> linkedin</a>
+                <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i> youtube</a>
             </div>
 
         </section>
@@ -322,6 +108,7 @@
          | all rights reserverd!</div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="jobs.js"></script>
+    <script src="./Home/common.js"></script>
 </body>
 </html>

@@ -64,7 +64,7 @@ section{
     max-width: 1200px;
 }
 
-.access{
+#auth-buttons{
     display: flex;
     gap: 20px;
 }
@@ -293,7 +293,7 @@ section{
     padding: 1.4rem;
     font-size: 1.8rem;
     color: var(--black);
-    /* text-transform: capitalize; */
+    
     text-align: center;
     user-select: none;
     cursor: pointer;
@@ -471,6 +471,15 @@ section{
     box-shadow: var(--box-shadow);
     overflow: hidden;
 
+}
+
+#jobResults{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive grid */
+    gap: 1.5rem;
+    padding: 20px;
+    max-width: 1200px; /* Adjust container width */
+    margin: auto; /* Center align */
 }
 
 .body-container {
@@ -710,3 +719,48 @@ max-width: 1200px;
         font-size: 16px;
         font-weight: bold;
     }
+
+    .guest-message {
+        text-align: center;
+        font-size: 1.2rem;
+        color: #dc3545;
+        margin-bottom: 20px;
+      }
+      
+      .guest-message a {
+        color: #007bff;
+        text-decoration: underline;
+      }
+      
+      .guest-message a:hover {
+        color: #0056b3;
+      }
+
+
+      .toast {
+        display: none;
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(70%);
+        background-color: #dc3545;
+        color: white;
+        padding: 15px 20px;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 10000;
+        font-size: 14px;
+        text-align: center;
+      }
+      
+      .toast.show {
+        display: block;
+        animation: fadeInOut 3s ease-in-out;
+      }
+      
+      @keyframes fadeInOut {
+        0% { opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { opacity: 0; }
+      }

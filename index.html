@@ -14,8 +14,7 @@
 
             <div id="menu-btn" class="fas fa-bars-staggered"></div>
 
-            <a href="index.html" class="Logo"><i class="fas fa-briefcase"></i>
-            Jobify</a>
+            <a href="index.html" class="Logo"><i class="fas fa-briefcase"></i>Jobify</a>
 
             <nav class="navbar">
                 <a href="index.html">Home</a>
@@ -24,9 +23,28 @@
                 <a href="./contact.html">Contact us</a>
             </nav>
 
-            <div class="access">
+            <!-- <div class="access">
                 <a href="./Home/login.html" class="btn-1" style="margin-top: 0;">Login</a>
                 <a href="./Home/signup.html" class="btn-2" style="margin-top: 0;">Register</a>
+            </div> -->
+
+            <div class="auth-section">
+                <!-- Shown when user is not logged in -->
+                <div id="auth-buttons" class="auth-buttons">
+                    <a href="Home/login.html" class="btn-1">Login</a>
+                    <a href="Home/signup.html" class="btn-2">Register</a>
+                </div>
+                <!-- Shown when user is logged in -->
+                <div id="profile-section" class="profile" style="display: none;">
+                    <div class="profile-icon" onclick="toggleProfileMenu()">
+                        <img id="user-avatar" src="Jobseeker/img_avatar.png" alt="User Avatar">
+                        <span id="user-name">Guest</span>
+                    </div>
+                    <div id="profile-menu" class="profile-menu">
+                        <p><strong>Email:</strong> <span id="profile-email">user@example.com</span></p>
+                        <button onclick="logoutUser()">Sign Out</button>
+                    </div>
+                </div>
             </div>
         </section>
     </header>
@@ -109,11 +127,11 @@
 
             <div class="box">
                 <h3>follow us</h3>
-                <a href="#"><i class="fab fa-facebook-f"></i> facebook</a>
-                <a href="#"><i class="fab fa-twitter"></i> twitter</a>
-                <a href="#"><i class="fab fa-instagram"></i> instagram</a>
-                <a href="#"><i class="fab fa-linkedin"> </i> linkedin</a>
-                <a href="#"><i class="fab fa-youtube"></i> youtube</a>
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i> facebook</a>
+                <a href="https://x.com/"><i class="fab fa-twitter"></i> twitter</a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i> instagram</a>
+                <a href="https://in.linkedin.com/"><i class="fab fa-linkedin"> </i> linkedin</a>
+                <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i> youtube</a>
             </div>
 
         </section>
@@ -122,6 +140,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="./Home/common.js"></script>
 </body>
 </html>
 
