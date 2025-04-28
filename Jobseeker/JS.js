@@ -375,7 +375,7 @@ async function loadMyApplications() {
       const applicationCard = document.createElement("div");
       applicationCard.className = "application-card";
       applicationCard.innerHTML = `
-        <h3>Job ID: ${application.jobId}</h3>
+        <h3>Job ID: ${application.email}</h3>
         <p><strong>Status:</strong> ${application.status}</p>
         <p><strong>Resume:</strong> <a href="#" onclick="downloadResume('${application.resume}', '${application.fullName}_resume.pdf')">Download</a></p>
       `;
